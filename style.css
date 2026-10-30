@@ -1,0 +1,200 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #ffd6e7,
+    #ffedf4,
+    #e9d5ff
+  );
+  color: #9c315e;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 750px;
+  margin: auto;
+  padding: 45px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-block;
+  background: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  color: #ff5794;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 5px 20px #ff8bb555;
+}
+
+h1 {
+  font-size: clamp(30px, 7vw, 48px);
+  margin: 25px 0 10px;
+  color: #ec5791;
+  text-shadow: 2px 3px 10px #ffb5d3;
+}
+
+h2 {
+  color: #ed5791;
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  color: #ad5679;
+  line-height: 1.8;
+}
+
+.teddy {
+  font-size: 100px;
+  margin: 25px;
+  animation: bounce 2s infinite;
+}
+
+button {
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(45deg, #ff5794, #ff8ab6);
+  color: white;
+  padding: 15px 28px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 7px 20px #ff8ab677;
+  transition: .3s;
+  margin: 15px 5px;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px #ff579477;
+}
+
+.letter,
+.counter,
+.jokes,
+.surprise {
+  background: #ffffffc9;
+  padding: 30px 22px;
+  border-radius: 25px;
+  margin-top: 35px;
+  box-shadow: 0 10px 35px #d86a9740;
+  border: 1px solid white;
+}
+
+.letter {
+  display: none;
+  animation: fadeIn 1s ease;
+}
+
+.letter p {
+  line-height: 2;
+  color: #99506d;
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.timer div {
+  background: #ffe0ed;
+  padding: 15px 5px;
+  border-radius: 15px;
+}
+
+.timer span {
+  display: block;
+  font-size: 25px;
+  font-weight: 800;
+  color: #ec5791;
+}
+
+.timer small {
+  font-size: 11px;
+}
+
+.counter h3 {
+  font-size: 15px;
+  color: #e95b91;
+}
+
+.jokes p {
+  line-height: 1.8;
+  min-height: 55px;
+}
+
+#surpriseText {
+  color: #ed5791;
+  font-size: 21px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+footer {
+  padding: 60px 10px 30px;
+  line-height: 2;
+}
+
+footer h1 {
+  font-size: 65px;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: fly linear forwards;
+  z-index: 1;
+}
+
+@keyframes fly {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-15px);}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width: 450px) {
+  .timer span {
+    font-size: 19px;
+  }
+
+  .container {
+    padding: 35px 14px;
+  }
+
+  .letter, .counter, .jokes, .surprise {
+    padding: 24px 15px;
+  }
+}
